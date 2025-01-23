@@ -4,7 +4,7 @@ function App() {
   return (
     <div className="bg-primary h-screen">
       <HeroEffects />
-      <div>hi</div>
+      <div>i</div>
       <GraphComponent />
     </div>
   );
