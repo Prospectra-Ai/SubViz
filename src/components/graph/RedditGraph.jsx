@@ -11,7 +11,7 @@ const RedditGraph = ({ data }) => {
 
     // Dimensions and padding
     const width = 400;
-    const height = 400;
+    const height = 250;
     const padding = 40;
 
     // Create SVG container
@@ -136,7 +136,7 @@ const RedditGraph = ({ data }) => {
   return (
     <svg
       ref={svgRef}
-      className="text-primary  items-center justify-center md:max-w-xl"
+      className="text-primary h-96 md:h-full items-center justify-center md:max-w-xl"
     />
   );
 };
