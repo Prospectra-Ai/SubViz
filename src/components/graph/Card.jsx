@@ -30,7 +30,7 @@ const Card = ({ data, keyword }) => {
   };
 
   return (
-    <div className="px-4 md:px-8 lg:px-16">
+    <div className="px-4 md:px-8 lg:px-16 bg-primary">
       <h1 className="text-primary text-3xl py-2 mb-4 text-center">
         Top Engaging Posts
       </h1>

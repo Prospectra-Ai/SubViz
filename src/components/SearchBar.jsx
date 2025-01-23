@@ -53,7 +53,7 @@ const SearchBar = ({ keyword, setKeyword, onSearch, loading }) => {
       <button
         onClick={onSearch}
         disabled={loading}
-        className={`h-9 px-4 flex items-center gap-2 rounded-lg
+        className={`h-9 px-4 flex items-center gap-2 rounded-lg cursor-pointer
           ${
             loading
               ? "bg-[#2b384d] border-none cursor-not-allowed"

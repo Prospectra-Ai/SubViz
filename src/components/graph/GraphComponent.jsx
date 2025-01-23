@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SearchBar from "../SearchBar";
 import RedditGraph from "./RedditGraph";
+import ReportDemo from "../ReportDemo";
 
 import { motion } from "framer-motion";
 import { FaLinkedin, FaReddit, FaXTwitter } from "react-icons/fa6";
@@ -87,10 +88,10 @@ const GraphComponent = () => {
     }
   };
 
-  const heroText = "Subreddit Navigator".split(" ");
+  const heroText = "SubViz - SubReddit Navigator".split(" ");
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden bg-primary">
       <section className="relative z-20 text-center py-12 px-4 sm:px-8 md:px-16 mb-10 mt-4">
         <div className="flex flex-col items-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-primary tracking-wide mt-8 md:mt-16 poppins-bold">
@@ -125,12 +126,13 @@ const GraphComponent = () => {
           ) : (
             !error && (
               <p className="text-secondary mt-4 text-error text-sm sm:text-base">
-                No data to display. Enter a proper keyword to search.
+                Enter a proper keyword to search.
               </p>
             )
           )}
 
-          {redditData && (
+          {redditData?.data?.children?.length ? <ReportDemo /> : <></>}
+          {/* {redditData && (
             <div className="mt-10 py-8 px-4 flex flex-col items-center text-primary">
               <div className="text-center max-w-3xl px-4">
                 <p className="text-base sm:text-lg md:text-xl font-medium">
@@ -183,7 +185,7 @@ const GraphComponent = () => {
                 </a>
               </div>
             </div>
-          )}
+          )} */}
         </div>
       </section>
     </div>
