@@ -73,7 +73,7 @@ const GraphComponent = () => {
               target="_blank"
             >
               <img
-                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=814829&theme=light&t=1737706882462"
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=814829&theme=light&t=1737715818611"
                 alt="SubViz - Explore&#0032;Reddit&#0032;like&#0032;a&#0032;pro&#0032;–&#0032;with&#0032;SubViz’s&#0032;fun&#0032;map&#0033; | Product Hunt"
                 width="250"
                 height="54"
