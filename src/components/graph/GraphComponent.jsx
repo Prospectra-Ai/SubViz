@@ -58,7 +58,10 @@ const GraphComponent = () => {
       setLoading(false);
     }
   };
-  const heroText = "SubViz - SubReddit Navigator".split(" ");
+  const heroText =
+    "SubViz - Unlock the World of Subreddits with an Interactive Map".split(
+      " "
+    );
 
   return (
     <div className="relative overflow-hidden bg-primary">

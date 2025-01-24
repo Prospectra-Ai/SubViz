@@ -31,7 +31,7 @@ const Card = ({ data, keyword }) => {
 
   return (
     <div className="px-4 md:px-8 lg:px-16 bg-primary mt-10">
-      <h1 className="text-primary text-3xl py-2 mb-4 text-center">
+      <h1 className="text-hero font-semibold text-xl md:text-4xl py-2 mb-4 text-center">
         Top Engaging Posts
       </h1>
       <div className="cards-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
