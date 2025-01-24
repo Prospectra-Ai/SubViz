@@ -7,7 +7,7 @@ const SidePopup = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 8000);
+    }, 10000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -15,7 +15,7 @@ const SidePopup = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed right-0 top-1/2 transform -translate-y-1/2 z-50 w-72 bg-primary border border-primary text-primary shadow-2xl rounded-l-lg p-4 font-sans">
+    <div className="fixed right-0 top-[120px] transform -translate-y-1/2 z-50 w-72 bg-primary border border-primary text-primary shadow-2xl rounded-l-lg p-4 font-sans">
       <button
         onClick={() => setIsVisible(false)}
         className="absolute top-2 right-2"
@@ -33,10 +33,10 @@ const SidePopup = () => {
       <p className="text-sm  mb-4">
         Turn Social Media Chaos into Actionable Insights in Seconds!
       </p>
-      <p className="text-sm  mb-4 bg-secondary p-4">
+      {/* <p className="text-sm  mb-4 bg-secondary p-4">
         Uncover trends, audience insights, signals, and data-driven
         opportunities. No manual work, no guesswork, just instant results.{" "}
-      </p>
+      </p> */}
 
       <a
         href="https://prospectraai.com/"

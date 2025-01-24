@@ -10,8 +10,8 @@ const RedditGraph = ({ data }) => {
     d3.select(svgRef.current).selectAll("*").remove();
 
     // Dimensions and padding
-    const width = 400;
-    const height = 250;
+    const width = 300;
+    const height = 260;
     const padding = 40;
 
     // Create SVG container
@@ -136,7 +136,7 @@ const RedditGraph = ({ data }) => {
   return (
     <svg
       ref={svgRef}
-      className="text-primary h-96 md:h-full items-center justify-center md:max-w-xl"
+      className="text-primary h-[320px] md:h-full items-center justify-center md:max-w-xl"
     />
   );
 };

@@ -7,7 +7,7 @@ const LeftSideInsightsPopup = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 20000);
+    }, 24000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -15,7 +15,7 @@ const LeftSideInsightsPopup = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed left-0 top-1/2 transform -translate-y-1/2 z-50 w-80 bg-primary border border-primary text-primary shadow-xl rounded-r-2xl p-5 font-sans">
+    <div className="fixed left-0 top-96 mt-20 transform z-50 w-76 bg-primary border border-primary text-primary shadow-xl rounded-r-2xl p-5 font-sans">
       <button
         onClick={() => setIsVisible(false)}
         className="absolute top-2 right-2"
