@@ -3,25 +3,21 @@ import React, { useState, useEffect } from "react";
 function UniqueVisitors() {
   const [uniqueVisitors, setUniqueVisitors] = useState(0);
 
+  // Load visitor count from localStorage and update state
   useEffect(() => {
-    // Use a library like 'localforage' to store visitor data in the browser
-    const getVisitorCount = async () => {
-      const storedCount = await localStorage.getItem("uniqueVisitors");
-      if (storedCount) {
-        setUniqueVisitors(storedCount);
-      } else {
-        // Increment the visitor count
-        const newCount = storedCount ? storedCount + 1 : 1;
-        await localStorage.setItem("uniqueVisitors", newCount);
-        setUniqueVisitors(newCount);
-      }
-    };
-
-    getVisitorCount();
+    const storedVisits = Number(localStorage.getItem("uniqueVisitors")) || 0;
+    setUniqueVisitors(storedVisits + 1);
   }, []);
 
+  // Save updated visitor count to localStorage
+  useEffect(() => {
+    if (uniqueVisitors > 0) {
+      localStorage.setItem("uniqueVisitors", uniqueVisitors);
+    }
+  }, [uniqueVisitors]);
+
   return (
-    <div className="bg-primary py-4 text-secondary text-xs text-center">
+    <div className="bg-primary py-4 text-secondary font-light text-xs text-center">
       Total Page Visitors: {uniqueVisitors}
     </div>
   );
