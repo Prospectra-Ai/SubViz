@@ -67,6 +67,19 @@ const GraphComponent = () => {
     <div className="relative overflow-hidden bg-primary">
       <section className="relative z-20 text-center py-12 px-4 sm:px-8 md:px-16 mb-10 mt-4">
         <div className="flex flex-col items-center">
+          <div className="py-4 -mb-6">
+            <a
+              href="https://www.producthunt.com/posts/subviz?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-subviz"
+              target="_blank"
+            >
+              <img
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=814829&theme=light&t=1737706882462"
+                alt="SubViz - Explore&#0032;Reddit&#0032;like&#0032;a&#0032;pro&#0032;–&#0032;with&#0032;SubViz’s&#0032;fun&#0032;map&#0033; | Product Hunt"
+                width="250"
+                height="54"
+              />
+            </a>
+          </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-primary tracking-wide mt-8 md:mt-16 poppins-bold">
             {heroText.map((word, i) => (
               <motion.span
