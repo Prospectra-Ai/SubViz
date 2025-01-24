@@ -9,7 +9,7 @@ const HeroComponent = () => {
       <Popup1 />
       <Popup2 />
       <GraphComponent />
-      <Visitors />
+      {/* <Visitors /> */}
     </>
   );
 };

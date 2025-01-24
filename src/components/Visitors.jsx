@@ -19,6 +19,17 @@ function UniqueVisitors() {
   return (
     <div className="bg-primary py-4 text-secondary font-light text-xs text-center">
       Total Page Visitors: {uniqueVisitors}
+      <div>
+        ok{" "}
+        <a href="https://www.hitwebcounter.com" target="_blank">
+          <img
+            src="https://hitwebcounter.com/counter/counter.php?page=18631951&style=0001&nbdigits=5&type=ip&initCount=0"
+            title="Counter Widget"
+            alt="Visit counter For Websites"
+            border="0"
+          />
+        </a>
+      </div>
     </div>
   );
 }
