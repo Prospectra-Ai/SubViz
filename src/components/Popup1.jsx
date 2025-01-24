@@ -25,7 +25,9 @@ const SidePopup = () => {
 
       <div className="flex items-center mb-3">
         <TrendingUp className="text-blue-600 mr-2" size={24} />
-        <h3 className="text-lg font-semibold">Prospectra Insights</h3>
+        <h3 className="text-lg font-semibold text-yellow-400">
+          Get detailed Insights
+        </h3>
       </div>
 
       <p className="text-sm  mb-4">
@@ -41,7 +43,7 @@ const SidePopup = () => {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <button className="w-full py-2 rounded-md btn-secondary outfit-regular transition cursor-pointer btn-secondary-hover">
+        <button className="w-full py-2 font-bold rounded-md btn-primary transition cursor-pointer btn-primary-hover">
           Know More
         </button>
       </a>
