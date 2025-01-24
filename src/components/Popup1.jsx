@@ -7,7 +7,7 @@ const SidePopup = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 10000);
+    }, 15000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -15,35 +15,31 @@ const SidePopup = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed right-0 top-[120px] transform -translate-y-1/2 z-50 w-72 bg-primary border border-primary text-primary shadow-2xl rounded-l-lg p-4 font-sans">
+    <div className="fixed right-0 top-18 transform -translate-y-1/2 z-50 w-56 sm:w-64 bg-primary border border-primary text-primary shadow-xl rounded-l-lg p-3 font-sans">
       <button
         onClick={() => setIsVisible(false)}
         className="absolute top-2 right-2"
       >
-        <X size={20} className="cursor-pointer" />
+        <X size={16} className="cursor-pointer" />
       </button>
 
-      <div className="flex items-center mb-3">
-        <TrendingUp className="text-blue-600 mr-2" size={24} />
-        <h3 className="text-lg font-semibold text-yellow-400">
+      <div className="flex items-center mb-2">
+        <TrendingUp className="text-blue-600 mr-2" size={20} />
+        <h3 className="text-sm font-semibold text-yellow-400">
           Get detailed Insights
         </h3>
       </div>
 
-      <p className="text-sm  mb-4">
-        Turn Social Media Chaos into Actionable Insights in Seconds!
+      <p className="text-xs mb-3">
+        Turn social media chaos into actionable insights in seconds!
       </p>
-      {/* <p className="text-sm  mb-4 bg-secondary p-4">
-        Uncover trends, audience insights, signals, and data-driven
-        opportunities. No manual work, no guesswork, just instant results.{" "}
-      </p> */}
 
       <a
         href="https://prospectraai.com/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <button className="w-full py-2 font-bold rounded-md btn-primary transition cursor-pointer btn-primary-hover">
+        <button className="w-full py-2 text-xs font-bold rounded-md btn-primary transition cursor-pointer btn-primary-hover">
           Know More
         </button>
       </a>

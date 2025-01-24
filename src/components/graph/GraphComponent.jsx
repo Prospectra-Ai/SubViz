@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SearchBar from "../SearchBar";
 import RedditGraph from "./RedditGraph";
 import ReportDemo from "../ReportDemo";
+import scrollanimation from "../../assets/scrollanimation.gif";
 
 import { motion } from "framer-motion";
 import { FaLinkedin, FaReddit, FaXTwitter } from "react-icons/fa6";
@@ -65,7 +66,7 @@ const GraphComponent = () => {
 
   return (
     <div className="relative overflow-hidden bg-primary">
-      <section className="relative z-20 text-center py-12 px-4 sm:px-8 md:px-16 mb-10 mt-4">
+      <section className="relative z-20 text-center py-2 md:py-10 px-4 sm:px-8 md:px-16 mb-10 mt-4">
         <div className="flex flex-col items-center">
           <div className="py-4 -mb-6">
             <a
@@ -80,7 +81,7 @@ const GraphComponent = () => {
               />
             </a>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-primary tracking-wide mt-8 md:mt-16 poppins-bold">
+          <h2 className="text-xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-primary tracking-wide mt-4 md:mt-16 poppins-bold">
             {heroText.map((word, i) => (
               <motion.span
                 key={i}
@@ -93,7 +94,7 @@ const GraphComponent = () => {
             ))}
           </h2>
 
-          <div className="mt-8 md:mt-10 max-w-4xl w-full flex items-center justify-center">
+          <div className="mt-2 md:mt-10 max-w-4xl w-full flex items-center justify-center">
             <SearchBar
               keyword={keyword}
               setKeyword={setKeyword}
@@ -107,6 +108,7 @@ const GraphComponent = () => {
           {redditData?.data?.children?.length ? (
             <div className="flex flex-col items-center w-full px-4">
               <RedditGraph data={redditData} />
+
               <Card keyword={keyword} data={redditData} />
             </div>
           ) : (

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { IoIosMore } from "react-icons/io";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import HeroEffects from "../effects/HeroEffects";
+import scrollanimation from "../../assets/scrollanimation.gif";
 
 const Card = ({ data, keyword }) => {
   // Extract and transform the data
@@ -30,52 +31,57 @@ const Card = ({ data, keyword }) => {
   };
 
   return (
-    <div className="px-4 md:px-8 lg:px-16 bg-primary mt-10">
-      <h1 className="text-hero font-semibold text-xl md:text-4xl py-2 mb-4 text-center">
-        Top Engaging Posts
-      </h1>
-      <div className="cards-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        {engagingPosts.length > 0 ? (
-          engagingPosts
-            .slice(0, visiblePosts)
-            .map(({ id, permalink, user, text }, index) => (
-              <div
-                key={index}
-                className="card bg-secondary text-primary border-primary border-b-2 p-4 rounded-md shadow-md"
-              >
-                <h3 className="text-sm font-bold truncate">{id}</h3>
-                <p className="text-xs text-secondary">User: {user}</p>
-                <p className="text-xs mt-2">
-                  {text.length > 20 ? `${text.substring(0, 20)}...` : text}
-                </p>
-                <a
-                  href={permalink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-blue-600 mt-2 inline-block text-xs"
+    <div className="px-4 md:px-8 lg:px-16 bg-primary mt-4 flex flex-col items-center">
+      <div className="">
+        <img src={scrollanimation} alt="Fun GIF" className="rounded-xl w-24" />
+      </div>
+      <div>
+        <h1 className="text-hero font-semibold text-xl md:text-4xl py-2 mb-4 text-center">
+          Top Engaging Posts
+        </h1>
+        <div className="cards-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {engagingPosts.length > 0 ? (
+            engagingPosts
+              .slice(0, visiblePosts)
+              .map(({ id, permalink, user, text }, index) => (
+                <div
+                  key={index}
+                  className="card bg-secondary text-primary border-primary border-b-2 p-4 rounded-md shadow-md"
                 >
-                  View on Reddit
-                </a>
-              </div>
-            ))
-        ) : (
-          <div className="text-error text-center col-span-full">
-            None of the posts available right now are engaging, try a different
-            keyword.
+                  <h3 className="text-sm font-bold truncate">{id}</h3>
+                  <p className="text-xs text-secondary">User: {user}</p>
+                  <p className="text-xs mt-2">
+                    {text.length > 20 ? `${text.substring(0, 20)}...` : text}
+                  </p>
+                  <a
+                    href={permalink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 mt-2 inline-block text-xs"
+                  >
+                    View on Reddit
+                  </a>
+                </div>
+              ))
+          ) : (
+            <div className="text-error text-center col-span-full">
+              None of the posts available right now are engaging, try a
+              different keyword.
+            </div>
+          )}
+        </div>
+        {engagingPosts.length > visiblePosts && (
+          <div className="flex justify-center mt-4">
+            <button
+              onClick={loadMorePosts}
+              className="flex items-center bg-primary text-primary tracking-widest px-4 py-2 rounded-md shadow hover:bg-primary-dark transition gap-2"
+            >
+              View More
+              <FaAngleDoubleDown className="mr-2" />
+            </button>
           </div>
         )}
       </div>
-      {engagingPosts.length > visiblePosts && (
-        <div className="flex justify-center mt-4">
-          <button
-            onClick={loadMorePosts}
-            className="flex items-center bg-primary text-primary tracking-widest px-4 py-2 rounded-md shadow hover:bg-primary-dark transition gap-2"
-          >
-            View More
-            <FaAngleDoubleDown className="mr-2" />
-          </button>
-        </div>
-      )}
     </div>
   );
 };
