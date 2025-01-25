@@ -20,7 +20,10 @@ const SidePopup = () => {
         onClick={() => setIsVisible(false)}
         className="absolute top-2 right-2"
       >
-        <X size={16} className="cursor-pointer" />
+        <X
+          size={16}
+          className="cursor-pointer  border border-primary rounded-md"
+        />
       </button>
 
       <div className="flex items-center mb-2">
@@ -31,7 +34,8 @@ const SidePopup = () => {
       </div>
 
       <p className="text-xs mb-3">
-        Turn social media chaos into actionable insights in seconds!
+        Turn social media chaos into actionable insights in seconds with
+        one-click!
       </p>
 
       <a
