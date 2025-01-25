@@ -7,7 +7,7 @@ const SidePopup = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 15000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);

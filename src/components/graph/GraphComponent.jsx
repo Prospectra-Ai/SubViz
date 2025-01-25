@@ -3,6 +3,8 @@ import SearchBar from "../SearchBar";
 import RedditGraph from "./RedditGraph";
 import ReportDemo from "../ReportDemo";
 import scrollanimation from "../../assets/scrollanimation.gif";
+import Popup1 from "../Popup1";
+import Popup2 from "../Popup2";
 
 import { motion } from "framer-motion";
 import { FaLinkedin, FaReddit, FaXTwitter } from "react-icons/fa6";
@@ -93,7 +95,6 @@ const GraphComponent = () => {
               </motion.span>
             ))}
           </h2>
-
           <div className="mt-2 md:mt-10 max-w-4xl w-full flex items-center justify-center">
             <SearchBar
               keyword={keyword}
@@ -102,9 +103,7 @@ const GraphComponent = () => {
               loading={loading}
             />
           </div>
-
           {error && <p className="text-red-500 mt-4">Error: {error}</p>}
-
           {redditData?.data?.children?.length ? (
             <div className="flex flex-col items-center w-full px-4">
               <RedditGraph data={redditData} />
@@ -117,6 +116,15 @@ const GraphComponent = () => {
                 Enter a proper keyword to search.
               </p>
             )
+          )}
+
+          {redditData?.data?.children?.length ? (
+            <>
+              <Popup1 />
+              <Popup2 />
+            </>
+          ) : (
+            <></>
           )}
 
           {redditData?.data?.children?.length ? <ReportDemo /> : <></>}

@@ -7,7 +7,7 @@ const LeftSideInsightsPopup = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(true);
-    }, 28000);
+    }, 10000);
 
     return () => clearTimeout(timer);
   }, []);
@@ -15,7 +15,7 @@ const LeftSideInsightsPopup = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed left-0 top-7/8 transform -translate-y-1/2 z-50 w-64 sm:w-72 bg-primary border border-primary text-primary shadow-xl rounded-r-xl p-4 font-sans">
+    <div className="fixed left-0 top-3/4 transform z-50 w-64 sm:w-72 bg-primary border border-primary text-primary shadow-xl rounded-r-xl p-4 font-sans">
       <button
         onClick={() => setIsVisible(false)}
         className="absolute top-2 right-2"
@@ -29,18 +29,18 @@ const LeftSideInsightsPopup = () => {
       <div className="flex items-start mb-2">
         <h3 className="text-sm font-semibold text-yellow-400">
           Want detailed insights from{" "}
-          <span className="underline">Twitter, LinkedIn & Reddit</span>?{" "}
+          <span className="underline">Twitter, LinkedIn & Reddit</span> ?{" "}
           <span className="font-light">
             (Ex. *Compititive Analysis , *Sentimental Analysis etc.)
           </span>
         </h3>
       </div>
 
-      <p className="text-xs mb-3">
+      {/* <p className="text-xs mb-3">
         Uncover trends, audience insights, signals, and data-driven
         oppertunities. No manual work, no guesswork, just instant results on
         one-click.
-      </p>
+      </p> */}
 
       {/* <div className="space-y-2">
         <div className="bg-secondary p-2 rounded-md">
